@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  postgre_13:
+    image: "postgres:13.1"
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - /D/Linux/Postgre/Data:/var/lib/postgresql/data/pgdata
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    
